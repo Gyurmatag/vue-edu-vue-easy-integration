@@ -7,8 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-<div id="app" class="min-h-screen bg-gray-100 flex items-center justify-center">
-    <div class="bg-white p-8 rounded-xl shadow-md w-96">
+<div id="app" class="min-h-screen bg-gray-100 flex flex-col items-center">
+    <div class="bg-white p-8 rounded-xl shadow-md w-96 mt-20">
         <input v-model="name"
                placeholder="Your name"
                class="w-full p-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-200 transition"
@@ -17,6 +17,8 @@
             Greetings, {{ name }}!
         </p>
     </div>
+    <img v-if="name.toLowerCase() === 'vue'" src="https://i.ibb.co/41Q6Ftx/1-8-AAdexf-OAK9-R-AIha-PBQ-removebg-preview.png" alt="vue">
+    <img v-if="name.toLowerCase() === 'floki'" src="https://i.ibb.co/QrhLRpx/floki-removebg-preview.png" alt="floki" >
 </div>
 
 <script src="https://unpkg.com/vue@3"></script>
